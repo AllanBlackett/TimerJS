@@ -5,14 +5,61 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
-.swContainer {
-  width: 1000px;
-  height: 400px;
+.container {
+  width: 800px;
+  height: 250px;
   margin: 100px auto 0 auto;
   border: 1px solid red;
   
-} 
+}
+
+/* Timer Section */
+.timerWrapper {
+ width: 50%;
+ border: 1px solid blue;
+ float: left;
+}
+
+.timerWrapper h2 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+#timer {
+  border: 1px solid #000;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  padding-top: 35px;
+  margin: 0 auto;
+}
+input {
+  text-align: center;
+}
+
+#count {
+  font-size: 50px;
+}
+
+/* Stopwatch Section */
+.stopwatchWrapper {
+ width: 50%;
+ border: 1px solid blue;
+ float: left; 
+}
+
+.stopwatchWrapper h2 {
+  text-align: center;
+  margin: 10px 0;
+}
+
 #stopwatch {
- width: 100px
+  border: 1px solid #000;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  padding-top: 35px;
+  margin: 0 auto;
 }
