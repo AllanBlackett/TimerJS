@@ -33,9 +33,19 @@
 //* The setInterval() method repeats a given function at every given time-interval.
 let myTimer;
 
+// Start Timer
 function newTimer(){
  myTimer = setInterval(countdown, 1000);
-}
+ document.getElementById('dl').classList.add('hide');
+} 
+
+
+// function stopTimer() {
+//     document.getElementById('dl').classList.add('show');
+// }
+
+// document.getElementById('sl').onclick = stopTimer();
+
 
 function countdown() {
     let container = document.getElementById('count');
@@ -56,5 +66,24 @@ function countdown() {
       } else {
           container.innerHTML = 'Time over';
           clearInterval(myTimer);
+          document.getElementById('dl').classList.add('show');
+
       }
   }
+// ! Something that refreshes or restarts the "state of everything"
+// ! If I can just reset everything to a "blank state" that works
+  function restartTimer() {
+      if (myTimer) {
+          clearInterval(myTimer);
+        //   document.getElementById('count').innerHTML = "0:0:0";
+          document.getElementById('dl').classList.add('show');
+          document.getElementById('hms').innerHTML = "0:0:0";
+        //   time.seconds = 0;
+        //   time.minutes = 0;
+        //   time.hours = 0;
+      } else {
+        // myTimer = setInterval(countdown, 1000);
+      }
+  }
+
+
