@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TimerJS</title>
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/0855a79e6e.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+  <div class="container">
+    <!--* Timer -->
+    <div class="timerWrapper">
+      <h2>Timer</h2>
+      <div id="timer">
+        <div id="count">00:00:00</div>
+        <!-- User input values -->
+        <input type="text" id="hms"  placeholder="00:00:00"/>
+        <!-- Start -->        
+        <button id="dl" onclick="newTimer()">Start</button>
+        <!-- Stop -->
+        <button id="sl" onclick="clearInterval(myTimer)">Stop</button>
+      </div>
+    </div>
 
-  <!-- Stopwatch -->
-  <div class="swContainer">
-    <div id="stopwatch">0</div>
-
+    <!--* Stopwatch -->
+    <div class="stopwatchWrapper">
+      <h2>Stopwatch</h2>
+      <div id="stopwatch">0</div>
+    </div>
   </div>
-  
+
   <!-- Main Script -->
-  <script src="main.js"></script>
+  <script src="main2.js"></script>
 </body>
+
 </html>
