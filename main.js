@@ -31,30 +31,59 @@
   };
 //* Save the interval's handle to `timer`
 //* The setInterval() method repeats a given function at every given time-interval.
-let myTimer;
+// let myTimer;
 
+// let myTimer = setInterval(() => { 
+//   countdown(); 
+// }, 1000);
+// ! Something that refreshes or restarts the "state of everything"
+
+  
+  
+// Start Timer
 function newTimer(){
- myTimer = setInterval(countdown, 1000);
+  myTimer = setInterval(countdown, 1000);
+  document.getElementById('dl').classList.add('hide');
+ } 
+
+ 
+
+ function countdown() {
+  let container = document.getElementById('count');
+    if (time.seconds > 0) {
+        time.seconds--;
+    } else {
+        if (time.minutes > 0) {
+            time.minutes--;
+            time.seconds = 60;
+        } else {
+            time.minutes = 60;
+            time.seconds = 60;
+            time.hours--;
+        }
+    }
+    if (time.hours >= 0) {
+        container.innerHTML = time.hours + ':' + time.minutes + ':' + time.seconds;
+    } else {
+        // container.innerHTML = 'Time over';
+        clearInterval(myTimer.countdown());
+        document.getElementById('dl').classList.add('show');
+
+    }
+
+      
 }
 
-function countdown() {
-    let container = document.getElementById('count');
-      if (time.seconds > 0) {
-          time.seconds--;
-      } else {
-          if (time.minutes > 0) {
-              time.minutes--;
-              time.seconds = 60;
-          } else {
-              time.minutes = 60;
-              time.seconds = 60;
-              time.hours--;
-          }
-      }
-      if (time.hours >= 0) {
-          container.innerHTML = time.hours + ':' + time.minutes + ':' + time.seconds;
-      } else {
-          container.innerHTML = 'Time over';
+ 
+function restartTimer() {
+          container = document.getElementById('count').innerHTML = "0:0:0";
+          document.getElementById('dl').classList.add('show');
           clearInterval(myTimer);
-      }
+          // myTimer = null;
+          
   }
+
+
+function stop() {
+  document.getElementById('sl');
+}
