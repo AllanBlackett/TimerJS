@@ -12,30 +12,26 @@
 </head>
 
 <body>
+
   <div class="container">
-    <!--* Timer -->
-    <div class="timerWrapper">
-      <h2>Timer</h2>
-      <div id="timer">
-        <div id="count">00:00:00</div>
-        <!-- User input values -->
-        <input type="text" id="hms"  placeholder="00:00:00"/>
-        <!-- Start -->        
-        <button id="dl" onclick="newTimer()">Start</button>
-        <!-- Stop -->
-        <button id="sl" onclick="clearInterval(myTimer)">Stop</button>
-      </div>
+    <h2>Timer.js</h2>
+
+    <div class="counts">
+      <div><span id="hour">0:</span></div>
+      <div><span id="minute">0:</span></div>
+      <div><span id="seconds">0</span></div>
     </div>
 
-    <!--* Stopwatch -->
-    <div class="stopwatchWrapper">
-      <h2>Stopwatch</h2>
-      <div id="stopwatch">0</div>
+    <div class="buttons">
+      <button id="startButton" onclick="start()">Start</button>
+      <button id="stopButton" onclick="stop()">Stop</button>
+      <button id="stopButton" onclick="restart()">Restart</button>
     </div>
+
   </div>
 
   <!-- Main Script -->
-  <script src="main2.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
